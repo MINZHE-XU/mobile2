@@ -42,8 +42,7 @@ class ViewController: UIViewController {
             }
         })
     
-    
-*/
+    */
 
         let information = PFQuery(className: "messages")
         information.findObjectsInBackground { (objects:[PFObject]?, error:Error?) in
