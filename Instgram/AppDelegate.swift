@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let config = ParseClientConfiguration(block: {
+            (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = "instgramID";
+            ParseMutableClientConfiguration.clientKey = "instgramKEY";
+            ParseMutableClientConfiguration.server = "http://instgram-group.herokuapp.com/parse";
+        });
+        
+        Parse.initialize(with: config);
+
+        
         return true
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
