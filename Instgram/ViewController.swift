@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                /**
+
         // Do any additional setup after loading the view, typically from a nib.
         let data = UIImageJPEGRepresentation(imageUp.image!, 0.5)
         let file = PFFile(name:"picture.jpg",data:data!)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             }
         })
     
-    */
+                /**
 
         let information = PFQuery(className: "messages")
         information.findObjectsInBackground { (objects:[PFObject]?, error:Error?) in
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
                 print(error!)
             }
         }
-
+    */
     
     //override func didReceiveMemoryWarning() {
         //super.didReceiveMemoryWarning()
