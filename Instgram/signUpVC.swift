@@ -1,11 +1,10 @@
 //
 //  signUpVC.swift
-//  Instgram
+//  Instragram
 //
-//  Created by 许敏哲 on 17/10/18.
-//  Copyright © 2018 许敏哲. All rights reserved.
+//  Created by Ahmad Idigov on 07.12.15.
+//  Copyright © 2015 Akhmed Idigov. All rights reserved.
 //
-
 
 import UIKit
 import Parse
@@ -125,7 +124,7 @@ class signUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         // move up UI
         UIView.animate(withDuration: 0.4, animations: { () -> Void in
             self.scrollView.frame.size.height = self.scrollViewHeight - self.keyboard.height
-        })
+        }) 
     }
     
     
@@ -135,7 +134,7 @@ class signUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         // move down UI
         UIView.animate(withDuration: 0.4, animations: { () -> Void in
             self.scrollView.frame.size.height = self.view.frame.height
-        })
+        }) 
     }
     
     
@@ -180,7 +179,7 @@ class signUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         user["fullname"] = fullnameTxt.text?.lowercased()
         user["bio"] = bioTxt.text
         user["web"] = webTxt.text?.lowercased()
-        
+
         // in Edit Profile it's gonna be assigned
         user["tel"] = ""
         user["gender"] = ""
@@ -204,7 +203,7 @@ class signUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 appDelegate.login()
                 
             } else {
-                
+
                 // show alert message
                 let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
                 let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
@@ -225,9 +224,8 @@ class signUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     
     
     
 }
-

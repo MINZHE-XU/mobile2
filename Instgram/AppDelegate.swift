@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Instgram
+//  Instragram
 //
-//  Created by 许敏哲 on 17/10/18.
+//  Created by 许敏哲 on 20/9/18.
 //  Copyright © 2018 许敏哲. All rights reserved.
 //
 
@@ -86,5 +86,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
-
 
